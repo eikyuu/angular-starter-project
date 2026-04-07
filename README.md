@@ -58,6 +58,7 @@ src/
 │   │   ├── auth/
 │   │   │   ├── ui/login.component   # Reactive login form (PrimeNG inputs)
 │   │   │   └── auth.routes.ts
+│   │   │   └── page.ts
 │   │   └── dashboard/
 │   │       ├── data-access/
 │   │       │   ├── dashboard.service.ts  # Typed HTTP calls (+ dev mock)
