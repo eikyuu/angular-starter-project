@@ -4,7 +4,7 @@ export const HOME_ROUTES: Routes = [
   {
     path: '',
     loadComponent: () =>
-      import('./ui/home.component').then((m) => m.HomeComponent),
+      import('./home').then((m) => m.Home),
     title: 'Home — templateproject',
   },
 ];
