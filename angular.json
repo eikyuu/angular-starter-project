@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "kahina-v2": {
+    "templateproject": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -35,11 +35,17 @@
           },
           "configurations": {
             "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "1MB",
+                  "maximumError": "2MB"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -61,10 +67,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "kahina-v2:build:production"
+              "buildTarget": "templateproject:build:production"
             },
             "development": {
-              "buildTarget": "kahina-v2:build:development"
+              "buildTarget": "templateproject:build:development"
             }
           },
           "defaultConfiguration": "development"
